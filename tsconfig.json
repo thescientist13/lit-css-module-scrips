@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "preserve",
+    "lib": ["es2022", "DOM", "DOM.Iterable", "esnext"],
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true
+  },
+  "exclude": ["./public/", "./greenwood/"]
+}
