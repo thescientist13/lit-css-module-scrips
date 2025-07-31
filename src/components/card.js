@@ -1,17 +1,13 @@
-import { LitElement, html, css, unsafeCSS } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { LitElement, html } from 'lit';
 import sheet from './card.css' with { type: 'css'};
 
-@customElement('x-card')
-export class Card extends LitElement {
-
-  @property()
-  accessor title: string;
-
-  @property()
-  accessor thumbnail: string;
-
+class Card extends LitElement {
   static styles = [sheet];
+
+  static properties = {
+    title: {type: String},
+    thumbnail: {type: String}
+  };
 
   constructor() {
     super();
@@ -23,10 +19,6 @@ export class Card extends LitElement {
   render() {
     const { title, thumbnail } = this;
 
-    if(!title && !thumbnail) {
-      return;
-    }
-
     return html`
       <div>
         <h3>${title}</h3>
@@ -35,3 +27,5 @@ export class Card extends LitElement {
     `;
   }
 }
+
+customElements.define('x-card', Card);

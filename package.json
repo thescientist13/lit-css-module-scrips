@@ -3,16 +3,15 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "NODE_OPTIONS='--import @greenwood/cli/register --experimental-strip-types' greenwood develop",
-    "start": "NODE_OPTIONS='--import @greenwood/cli/register --experimental-strip-types' greenwood develop",
-    "build": "NODE_OPTIONS='--import @greenwood/cli/register --experimental-strip-types' greenwood build",
+    "dev": "greenwood develop",
+    "start": "greenwood develop",
+    "build": "greenwood build",
     "serve": "greenwood serve"
   },
   "dependencies": {
     "lit": "^3.3.1"
   },
   "devDependencies": {
-    "@greenwood/cli": "~0.33.0-alpha.4",
-    "typescript": "^5.8.0"
+    "@greenwood/cli": "~0.33.0-alpha.4"
   }
 }
